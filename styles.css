@@ -1,0 +1,102 @@
+/* Full-page setup */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: url('./assets/images/macbookInDark.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.my-portrait {
+  background: url('./assets/images/maz-ghibli.jpg') no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-row {
+  display: flex;
+  width: 90vw;
+  height: 80vh;
+  background-color: #00b8932b;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
+
+.col1 {
+  width: 75px;
+  height: 70vh;
+  background-color: #262626;
+}
+
+.col2 {
+  display: flex;
+  width: 300px;
+  height: 80vh;
+  /* background-color: #00b894; */
+  /* background: url('./assets/images/maz-ghibli.jpg') no-repeat center center fixed;
+  background-size: cover; */
+  justify-content: center;
+  /* align-content: center; */
+
+}
+
+.portray-overlay {
+  display: flex;
+  flex-direction: column;
+  /* Stack names vertically */
+  justify-content: flex-end;
+  /* Align content to the bottom */
+  align-items: center;
+  /* Center horizontally */
+  padding-bottom: 20px;
+}
+
+.name-1 {
+  font-size: 35px;
+}
+
+.name-2 {
+  
+  font-size: 32px;
+}
+
+.name-font{
+  font-family: "Sixtyfour Convergence", sans-serif;
+  color: aliceblue;
+  text-align: center;
+}
+
+.job-title {
+  font-family: "Markazi Text", serif;
+  /* font-optical-sizing: auto; */
+  text-align: center;
+  font-weight: 100;
+  font-size: larger;
+  color: rgb(228, 49, 49);
+  /* align-items: center; */
+}
+
+.col3 {
+  flex-grow: 1;
+  height: 70vh;
+  background-color: #262626;
+}
