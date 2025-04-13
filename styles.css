@@ -12,9 +12,10 @@ body {
 }
 
 .my-portrait {
-  background-image: linear-gradient(180deg,rgba(42, 123, 155, 0) 0%, rgba(48, 48, 48, 0.1) 44%, rgba(0, 0, 0, 0.75) 100%), url('./assets/images/maz-ghibli.jpg');
+  background-image: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, rgba(48, 48, 48, 0.1) 44%, rgba(0, 0, 0, 0.75) 100%), url('./assets/images/maz-ghibli.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 /* Dark overlay */
@@ -37,18 +38,25 @@ body {
   align-items: center;
   align-content: center;
   color: white;
+
 }
 
 .col1 {
   display: flex;
-  width: 75px;
+  padding-left: 1%;
+  padding-right: 1%;
+  /* width: 75px; */
+  /* flex:1; */
   height: 70vh;
   background-color: #151515;
 }
 
 .col2 {
   display: flex;
-  width: 300px;
+  /* width: 300px; */
+  /* flex: 4; */
+  padding-left: 10px;
+  padding-right: 10px;
   height: 80vh;
   justify-content: center;
   border-radius: 15px;
@@ -67,11 +75,11 @@ body {
 }
 
 .name-2 {
-  
+
   font-size: 32px;
 }
 
-.name-font{
+.name-font {
   font-family: "Sixtyfour Convergence", sans-serif;
   color: rgb(189, 224, 255);
   text-align: center;
@@ -86,12 +94,20 @@ body {
 }
 
 .col3 {
-  flex-grow: 1;
+  width: 0%;
   height: 70vh;
   background-color: #151515;
+  overflow: hidden;
+  transition: width 0.4s ease;
 }
 
-.quick-nav{
+.col3.expanded {
+  width: 70%;
+  /* flex-grow: 1; */
+  transition: width 0.4s ease;
+}
+
+.quick-nav {
   flex-direction: column;
   color: rgb(141, 141, 141);
   align-items: center;
@@ -104,11 +120,13 @@ body {
 }
 
 .active-icon {
-  color: #0d6efd; /* Bootstrap primary color */
+  color: #0d6efd;
+  /* Bootstrap primary color */
   /* cursor: pointer; */
 }
 
 .download-icon {
-  color: #c27508; /* Bootstrap primary color */
+  color: #c27508;
+  /* Bootstrap primary color */
   /* cursor: pointer; */
 }

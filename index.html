@@ -6,31 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maz's Website</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/bootstrap-css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Sixtyfour+Convergence&family=Special+Gothic+Expanded+One&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
   <div class="overlay">
     <div class="custom-row">
       <div class="col1 quick-nav">
-        <div class="mb-auto mt-5 active-icon" >
+        <div class="mb-auto mt-5 active-icon">
           <h4>Maz</h5>
         </div>
 
-        <i class=" bi bi-person fs-1 active-icon" data-original-size="fs-2"></i>
-        <i class=" bi bi-briefcase fs-3"          data-original-size="fs-3"></i>
-        <i class=" bi bi-mortarboard fs-2"        data-original-size="fs-2"></i>
-        <i class=" bi bi-telephone fs-3"          data-original-size="fs-3"></i>
-        <i class=" bi bi-linkedin fs-3"           data-original-size="fs-3"></i>
+        <i class="bi bi-person fs-1 active-icon" data-original-size="fs-2" data-section="about"></i>
+        <i class="bi bi-briefcase fs-3" data-original-size="fs-3" data-section="experience"></i>
+        <i class="bi bi-mortarboard fs-2" data-original-size="fs-2" data-section="education"></i>
+        <i class="bi bi-telephone fs-3" data-original-size="fs-3" data-section="contact"></i>
+        <i class="bi bi-linkedin fs-3" data-original-size="fs-3" data-section="linkedIn"></i>
 
         <div class="mt-auto mb-5 download-icon">
-          <i class="bi bi-cloud-download fs-3" ></i>
+          <i class="bi bi-cloud-download fs-3"></i>
         </div>
       </div>
       <div class="col2 my-portrait">
@@ -40,37 +42,49 @@
           <div class="job-title">Full Stack Developer</div>
         </div>
       </div>
-      <div class="col3" >Column 3</div>
+      <div class="col3 expanded p-3">
+
+      </div>
     </div>
   </div>
 </body>
 
+<!-- Templates -->
+<template id="about">
+  <h2>About Me</h2>
+  <p>Hello, I'm Maz, a full-stack dev with a passion for code.</p>
+</template>
+
+<template id="experience">
+  <h2>Work Experience</h2>
+  <ul>
+    <li>Company A – Developer</li>
+    <li>Company B – Intern</li>
+  </ul>
+</template>
+
+<template id="education">
+  <h2>Education</h2>
+  <p>Bachelors in Engineering from India</p>
+</template>
+
+<template id="contact">
+  <h2>Contact Me</h2>
+  <p>London, United Kingdom</p>
+</template>
+
+<template id="linkedIn">
+  <h2>My Linked in profile</h2>
+  <p>Mazhar Mohammed Linked In profile</p>
+</template>
+
+
+<script src="script.js">
+  
+</script>
 <script>
-  const icons = document.querySelectorAll('.quick-nav > i');
-
-  const sizeOrder = ['fs-1', 'fs-2', 'fs-3', 'fs-4', 'fs-5', 'fs-6'];
-
-  function getNextSize(current) {
-    const index = sizeOrder.indexOf(current);
-    return index > 0 ? sizeOrder[index - 1] : current; // make it 1 step larger
-  }
-
-  icons.forEach(icon => {
-    icon.addEventListener('click', () => {
-      icons.forEach(i => {
-        // Reset size to original
-        const originalSize = i.getAttribute('data-original-size');
-        sizeOrder.forEach(cls => i.classList.remove(cls)); // remove all size classes
-        i.classList.remove('active-icon');
-        i.classList.add(originalSize); // restore original size
-      });
-
-      // Enlarge clicked icon
-      const currentSize = icon.getAttribute('data-original-size');
-      const largerSize = getNextSize(currentSize);
-      icon.classList.remove(currentSize);
-      icon.classList.add(largerSize, 'active-icon');
-    });
+  window.addEventListener('DOMContentLoaded', () => {
+    handleTabClick('about');
   });
 </script>
 
