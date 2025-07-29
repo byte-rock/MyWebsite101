@@ -119,7 +119,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.active-icon {
+.theme-color {
   color: #0d6efd;
   /* Bootstrap primary color */
   /* cursor: pointer; */
@@ -129,4 +129,70 @@ body {
   color: #c27508;
   /* Bootstrap primary color */
   /* cursor: pointer; */
+}
+
+.scroll-hidden {
+  overflow-y: scroll; /* Enables vertical scroll */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+  padding: 8%;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+.sample-font{
+  font-family: "Sixtyfour Convergence", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.text-header-color{
+  color: rgb(217, 223, 255);
+  margin: 0px;
+}
+
+.text-color{
+  color: rgb(199, 199, 199);
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(8vh + 8vw);
+  width: calc(8vh + 8vw);
+  margin: 10px;
+}
+
+.icon-skill-text{
+  font-size: calc(1vh + 1vw);
+}
+
+.skills-row{
+  /* width: 100%; */
+  background-color: #0d6efd;
+  overflow: auto;
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden; /* optional */
+  white-space: nowrap;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;  /* Chrome/Safari */
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;          /* Two rows */
+  width: max-content;       /* Key for horizontal overflow */
+  /*gap: 20px;                /* Optional spacing between icons */
 }

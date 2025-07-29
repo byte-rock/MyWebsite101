@@ -21,11 +21,11 @@
   <div class="overlay">
     <div class="custom-row">
       <div class="col1 quick-nav">
-        <div class="mb-auto mt-5 active-icon">
+        <div class="mb-auto mt-5 theme-color">
           <h4>Maz</h5>
         </div>
 
-        <i class="bi bi-person fs-1 active-icon" data-original-size="fs-2" data-section="about"></i>
+        <i class="bi bi-person fs-1 theme-color" data-original-size="fs-2" data-section="about"></i>
         <i class="bi bi-briefcase fs-3" data-original-size="fs-3" data-section="experience"></i>
         <i class="bi bi-mortarboard fs-2" data-original-size="fs-2" data-section="education"></i>
         <i class="bi bi-telephone fs-3" data-original-size="fs-3" data-section="contact"></i>
@@ -39,10 +39,10 @@
         <div class="portray-overlay">
           <div class="name-1 name-font">MAZHAR</div>
           <div class="name-2 name-font">MOHAMMED</div>
-          <div class="job-title">Full Stack Developer</div>
+          <div class="job-title">Automation Architect</div>
         </div>
       </div>
-      <div class="col3 expanded p-3">
+      <div class="col3 expanded" id="scrollable-section">
 
       </div>
     </div>
@@ -51,8 +51,182 @@
 
 <!-- Templates -->
 <template id="about">
-  <h2>About Me</h2>
-  <p>Hello, I'm Maz, a full-stack dev with a passion for code.</p>
+  <div id="mazharScroll" class="scroll-hidden" style="height: 70vh; overflow-y: auto;">
+    <section class="text-color" id="about-me-description">
+      <h1 class="text-header-color" style="font-weight: bold; font-size: calc(3vh + 2vw);">about me</h1>
+      <div class="d-flex" style="font-style: italic;">
+        <p class="theme-color" style="padding-right: 12px;">32 years</p>
+        <p style="padding-right: 12px; color: rgb(180, 180, 180); font-weight: bold; ">/</p>
+        <p class="theme-color">London</p>
+      </div>
+      <p>
+        A highly accomplished <strong>Automation Architect</strong>, I specialize in developing scalable and
+        maintainable solutions across <strong>Web & Mobile Test Automation</strong> and <strong>API Testing</strong>.
+        With deep industry experience. My work spans healthcare, insurance, banking and public
+        sectors, where I've designed and implemented end-to-end frameworks. I'm well-versed in <strong>SAFe Agile,
+          Kanban, and Lean methodologies</strong>, consistently delivering high-quality outcomes in fast-paced,
+        cross-functional environments.
+      </p>
+      <p>
+        Beyond automation, I am deeply invested in <strong>full-stack development</strong>, having crafted
+        feature rich applications utilizing modern tech. Committed to continuous growth, I actively
+        contribute to internal innovations and mentoring.
+      </p>
+    </section>
+
+    <hr class="mt-5 mb-4">
+    <section class="text-color" id="about-me-skills">
+      <h1 class="text-header-color pb-4 " style="font-weight: bold; font-size: calc(3vh + 2vw);">my skills</h1>
+      
+
+      <div class="d-flex scroll-wrapper" id="skillScrollSection">
+        <div class="scroll-content">
+          <div class="d-flex skills-row">
+            <!-- Repeat these as needed -->
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/selenium-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+          </div>
+          <div class="d-flex skills-row " style="justify-content: center;">
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+            <div class="d-flex flex-column justify-content">
+              <img class="d-flex" src="./assets/playwright-icon.svg" height="100px" width="100px" alt="">
+              <p class="d-flex" style="justify-content: center;">Playwright</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-color" id="about-me-description">
+      <h1 class="text-header-color" style="font-weight: bold; font-size: calc(3vh + 2vw);">about me</h1>
+      <div class="d-flex" style="font-style: italic;">
+        <p class="theme-color" style="padding-right: 12px;">32 years</p>
+        <p style="padding-right: 12px; color: rgb(180, 180, 180); font-weight: bold; ">/</p>
+        <p class="theme-color">London</p>
+      </div>
+      <p>
+        A highly accomplished <strong>Automation Architect</strong>, I specialize in developing scalable and
+        maintainable solutions across <strong>Web & Mobile Test Automation</strong> and <strong>API Testing</strong>.
+        With deep industry experience. My work spans healthcare, insurance, banking and public
+        sectors, where I've designed and implemented end-to-end frameworks. I'm well-versed in <strong>SAFe Agile,
+          Kanban, and Lean methodologies</strong>, consistently delivering high-quality outcomes in fast-paced,
+        cross-functional environments.
+      </p>
+      <p>
+        Beyond automation, I am deeply invested in <strong>full-stack development</strong>, having crafted
+        feature rich applications utilizing modern tech. Committed to continuous growth, I actively
+        contribute to internal innovations and mentoring.
+      </p>
+    </section>
+
+    <hr class="mt-5 mb-4">
+
+
+
+    <h2 class="text-center mb-4">💻 Technical Expertise</h2>
+    <div class="row">
+      <div class="">
+        <h5 class="section-title">🌐 Programming Languages & Scripting</h5>
+        <ul class="skills-list">
+          <li>C#, Java, TypeScript, JavaScript, Dart, SQL, Swift</li>
+        </ul>
+      </div>
+      <div class="">
+        <h5 class="section-title">🧱 Front-End Web Development</h5>
+        <ul class="skills-list">
+          <li>Angular, Bootstrap, Material</li>
+        </ul>
+      </div>
+      <div class="">
+        <h5 class="section-title">⚙️ Back-End Development & Server Technologies</h5>
+        <ul class="skills-list">
+          <li>ExpressJS, NodeMailer</li>
+        </ul>
+      </div>
+      <div class="">
+        <h5 class="section-title">📱 Mobile App Development</h5>
+        <ul class="skills-list">
+          <li>Flutter, Android Studio, Xcode</li>
+        </ul>
+      </div>
+      <div class="">
+        <h5 class="section-title">🧰 Development Tools & IDEs</h5>
+        <ul class="skills-list">
+          <li>Visual Studio, VS Code, IntelliJ IDEA, Unity Server, Slack</li>
+        </ul>
+      </div>
+      <div class="">
+        <h5 class="section-title">🧪 Automation Framework Development</h5>
+        <ul class="skills-list">
+          <li>Playwright, Selenium, Protractor</li>
+          <li>UFT, Winium, CodedUI, IronOCR</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <template id="experience">
@@ -79,9 +253,7 @@
 </template>
 
 
-<script src="script.js">
-  
-</script>
+<script src="script.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     handleTabClick('about');
