@@ -171,22 +171,35 @@ body {
   font-size: calc(1vh + 1vw);
 }
 
-.skills-row{
-  /* width: 100%; */
-  background-color: #0d6efd;
-  overflow: auto;
-}
+
 
 .scroll-wrapper {
+  display: flex;
   overflow-x: auto;
   overflow-y: hidden; /* optional */
   white-space: nowrap;
   scrollbar-width: none;  /* Firefox */
   -ms-overflow-style: none;  /* IE/Edge */
+  -webkit-mask-image: linear-gradient(to right, 
+    rgba(0,0,0,0) 0%, 
+    rgba(0,0,0,1) 30%, 
+    rgba(0,0,0,1) 70%, 
+    rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to right, 
+    rgba(0,0,0,0) 0%, 
+    rgba(0,0,0,1) 30%, 
+    rgba(0,0,0,1) 70%, 
+    rgba(0,0,0,0) 100%);
+  
 }
-
-.scroll-wrapper::-webkit-scrollbar {
-  display: none;  /* Chrome/Safari */
+.skills-row{
+  /* width: 100%; */
+  /* background-color: #0d6efd; */
+  display: flex;
+  overflow: auto;
+  scrollbar-width: none;
+  justify-content: center;
+  padding-inline: 10%;
 }
 
 .scroll-content {
@@ -194,5 +207,20 @@ body {
   flex-direction: column;
   flex-wrap: wrap;          /* Two rows */
   width: max-content;       /* Key for horizontal overflow */
-  /*gap: 20px;                /* Optional spacing between icons */
+}
+
+.skill-icon-container{
+  margin: 1px;
+  height: 20vh;
+  width: 20vh;
+  background-color: blue;
+  padding-inline: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-icon-image{
+  display: flex;
+
 }
