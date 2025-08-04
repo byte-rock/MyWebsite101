@@ -55,7 +55,7 @@ function horizontalScrollDirection(event, iconsRect, mainRect) {
     return 0; // No horizontal scroll
 }
 
-function scrollIconsHorizontally(){
+function autoScrollIconsHorizontally() {
     const mainScroll = document.getElementById('mazharScroll');
     const skillScrollSection = document.getElementById('skillScrollSection');
     if (mainScroll) {
@@ -64,27 +64,28 @@ function scrollIconsHorizontally(){
             const iconsRectangle = skillScrollSection.getBoundingClientRect();
             const direction = horizontalScrollDirection(e, iconsRectangle, mainRectangle);
 
-            const iconsCenterY = iconsRectangle.top + iconsRectangle.height / 2;
-            const distanceToTop = iconsCenterY - mainRectangle.top;
-            
-            // Clamp the distance to range [0, mainRectangle.height]
-            const progress = Math.min(Math.max(1 - (distanceToTop / mainRectangle.height), 0), 1);
-            if (direction === 1) {
-                const maxScrollLeft = skillScrollSection.scrollWidth - skillScrollSection.clientWidth;
-                const targetScrollLeft = progress * maxScrollLeft;
-                skillScrollSection.scrollTo({
-                    left: targetScrollLeft,
-                    behavior: 'smooth'
-                });
-            } else if (direction === -1) {
-                const maxScrollRight = skillScrollSection.scrollWidth - skillScrollSection.clientWidth;
-                const targetScrollLeft = (1 - progress) * maxScrollRight;
-                skillScrollSection.scrollTo({
-                    left: ((maxScrollRight-targetScrollLeft)),
-                    behavior: 'smooth'
-                });
+            if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+                const iconsCenterY = iconsRectangle.top + iconsRectangle.height / 2;
+                const distanceToTop = iconsCenterY - mainRectangle.top;
+
+                // Clamp the distance to range [0, mainRectangle.height]
+                const progress = Math.min(Math.max(1 - (distanceToTop / mainRectangle.height), 0), 1);
+                if (direction === 1) {
+                    const maxScrollLeft = skillScrollSection.scrollWidth - skillScrollSection.clientWidth;
+                    const targetScrollLeft = progress * maxScrollLeft;
+                    skillScrollSection.scrollTo({
+                        left: targetScrollLeft,
+                        behavior: 'smooth'
+                    });
+                } else if (direction === -1) {
+                    const maxScrollRight = skillScrollSection.scrollWidth - skillScrollSection.clientWidth;
+                    const targetScrollLeft = (1 - progress) * maxScrollRight;
+                    skillScrollSection.scrollTo({
+                        left: ((maxScrollRight - targetScrollLeft)),
+                        behavior: 'smooth'
+                    });
+                }
             }
-            
         }, { passive: false });
     }
 }
@@ -96,8 +97,9 @@ function handleTabClick(templateId) {
 
     setTimeout(() => {
         mainScrollSection.innerHTML = template;
-        
+
         //Scroll the Skills icons horizontally
-        scrollIconsHorizontally();
+
+        autoScrollIconsHorizontally();
     }, 600);
 }
