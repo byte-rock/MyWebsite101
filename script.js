@@ -59,10 +59,15 @@ function autoScrollIconsHorizontally() {
     const mainScroll = document.getElementById('mazharScroll');
     const skillScrollSection = document.getElementById('skillScrollSection');
     if (mainScroll) {
+        // var isFocusedMouse = false;
         mainScroll.addEventListener('wheel', function (e) {
             const mainRectangle = mainScroll.getBoundingClientRect();
             const iconsRectangle = skillScrollSection.getBoundingClientRect();
             const direction = horizontalScrollDirection(e, iconsRectangle, mainRectangle);
+
+            // console.log("Main rect : " + mainRectangle.right)
+            // console.log("Icons rect : " + iconsRectangle.right)
+
 
             if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
                 const iconsCenterY = iconsRectangle.top + iconsRectangle.height / 2;
@@ -70,14 +75,15 @@ function autoScrollIconsHorizontally() {
 
                 // Clamp the distance to range [0, mainRectangle.height]
                 const progress = Math.min(Math.max(1 - (distanceToTop / mainRectangle.height), 0), 1);
-                if (direction === 1) {
+                if (direction === 1 ) {
                     const maxScrollLeft = skillScrollSection.scrollWidth - skillScrollSection.clientWidth;
                     const targetScrollLeft = progress * maxScrollLeft;
                     skillScrollSection.scrollTo({
                         left: targetScrollLeft,
                         behavior: 'smooth'
                     });
-                } else if (direction === -1) {
+                    // console.log("maxScrollLeft : " + maxScrollLeft)
+                }else if (direction === -1) {
                     const maxScrollRight = skillScrollSection.scrollWidth - skillScrollSection.clientWidth;
                     const targetScrollLeft = (1 - progress) * maxScrollRight;
                     skillScrollSection.scrollTo({
@@ -87,6 +93,18 @@ function autoScrollIconsHorizontally() {
                 }
             }
         }, { passive: false });
+
+
+        // skillScrollSection.addEventListener("pointerenter", () => {
+        //     console.log("Pointer entered horizontal scroll area");
+        //     isFocusedMouse = true;
+        // });
+        // skillScrollSection.addEventListener("pointerleave", () => {
+        //     console.log("Pointer left horizontal scroll area");
+        //     isFocusedMouse = false;
+        // });
+
+        
     }
 }
 

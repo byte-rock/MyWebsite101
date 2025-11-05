@@ -1,3 +1,8 @@
+:root {
+  --blue-color: #0d6efd;
+  
+}
+
 html,
 body {
   margin: 0;
@@ -78,7 +83,7 @@ body {
 }
 
 .active-icon {
-  color: #0d6efd;
+  color: var(--blue-color);
 }
 
 .name-1 {
@@ -122,7 +127,7 @@ body {
 }
 
 .theme-color {
-  color: #0d6efd;
+  color: var(--blue-color);
 }
 
 .download-icon {
@@ -134,6 +139,8 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 8%;
+  height: 70vh;
+  overflow-y: auto;
 }
 
 .scroll-hidden::-webkit-scrollbar {
@@ -143,6 +150,8 @@ body {
 .text-header-color {
   color: rgb(217, 223, 255);
   margin: 0px;
+  font-weight: bold;
+  font-size: calc(3vh+2vw);
 }
 
 .text-color {
@@ -180,13 +189,13 @@ body {
   -ms-overflow-style: none;
   -webkit-mask-image: linear-gradient(to right,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 20%,
-      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
       rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to right,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 20%,
-      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
       rgba(0, 0, 0, 0) 100%);
 
 }
@@ -223,4 +232,67 @@ body {
   height: 100%;
   object-fit: contain;
   /* aspect-ratio: 1 / 1; */
+}
+
+/* Below section is for Experience Template */
+
+.scroll-experience {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-inline: 12%;
+  height: 55vh;
+  overflow-y: auto;
+}
+
+.exp-main-header {
+  padding: 8%;
+  padding-bottom: 2%;
+}
+
+.exp-dot{
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-color);
+  align-self: center;
+}
+.exp-dates{
+  flex-shrink: 0;
+  align-content: center;
+  color: var(--blue-color);
+  font-style: italic;
+  margin-inline: 10px;
+}
+
+.exp-dates > .p-2{
+  margin: 0;
+}
+
+.exp-card{
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 10px;
+  border: solid #0d6dfd5d ;
+
+}
+
+.exp-card-title{
+  padding-bottom: 8px;
+}
+
+.timeline {
+  position: relative;
+  /* margin: 40px 0; */
+  /* padding-left: 30px; */
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px; 
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: var(--blue-color); /* solid line color */
 }

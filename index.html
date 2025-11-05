@@ -51,9 +51,9 @@
 
 <!-- Templates -->
 <template id="about">
-  <div id="mazharScroll" class="scroll-hidden" style="height: 70vh; overflow-y: auto;">
+  <div id="mazharScroll" class="scroll-hidden">
     <section class="text-color" id="about-me-description">
-      <h1 class="text-header-color" style="font-weight: bold; font-size: calc(3vh + 2vw);">about me</h1>
+      <h1 class="text-header-color">about me</h1>
       <div class="d-flex" style="font-style: italic;">
         <p class="theme-color" style="padding-right: 12px;">32 years</p>
         <p style="padding-right: 12px; color: rgb(180, 180, 180); font-weight: bold; ">/</p>
@@ -76,7 +76,7 @@
 
     <hr class="mt-5 mb-4">
     <section class="text-color" id="about-me-skills">
-      <h1 class="text-header-color pb-4 " style="font-weight: bold; font-size: calc(3vh + 2vw);">my skills</h1>
+      <h1 class="text-header-color pb-4 ">my skills</h1>
 
 
       <div class="scroll-wrapper" id="skillScrollSection">
@@ -114,8 +114,6 @@
               <img class="skill-icon-image" src="./assets/icons/Dart.svg">
               <p class="d-flex" style="justify-content: center;">Dart</p>
             </div>
-
-
           </div>
           <div class="skills-row ">
             <div class="skill-icon-container">
@@ -161,7 +159,7 @@
     <hr class="mt-5 mb-4">
 
     <section class="text-color" id="my-projects">
-      <h1 class="text-header-color" style="font-weight: bold; font-size: calc(3vh + 2vw);">experience</h1>
+      <h1 class="text-header-color">experience</h1>
       <p class="pt-2">
         My professional journey spans key industries such as banking, insurance, and healthcare. Giving me a
         well-rounded understanding of domain-driven development and the unique challenges each sector presents.
@@ -200,12 +198,64 @@
 
 </template>
 
-<template id="experience">
-  <h2>Work Experience</h2>
-  <ul>
-    <li>Company A – Developer</li>
-    <li>Company B – Intern</li>
-  </ul>
+<template class="d-flex" id="experience">
+  <div id="experience-section" class="">
+    <h1 class="exp-main-header d-flex text-header-color">work experience</h1>
+    <div class="scroll-experience">
+      <div class="timeline">
+        <div class="d-flex">
+          <i class="exp-dot bi bi-circle-fill "></i>
+          <div class="exp-dates">
+            <h6 class="p-2">2019 - Now</h6>
+          </div>
+          <div class="exp-card">
+            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
+              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <i class="exp-dot bi bi-circle-fill "></i>
+          <div class="exp-dates">
+            <h6 class="p-2">2019 - Now</h6>
+          </div>
+          <div class="exp-card">
+            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
+              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            </p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <i class="exp-dot bi bi-circle-fill "></i>
+          <div class="exp-dates">
+            <h6 class="p-2">2019 - Now</h6>
+          </div>
+          <div class="exp-card">
+            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
+              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            </p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <i class="exp-dot bi bi-circle-fill "></i>
+          <div class="exp-dates">
+            <h6 class="p-2">2019 - Now</h6>
+          </div>
+          <div class="exp-card">
+            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
+              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
 </template>
 
 <template id="education">
@@ -227,7 +277,7 @@
 <script src="script.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    handleTabClick('about');
+    handleTabClick('experience');
   });
 </script>
 
