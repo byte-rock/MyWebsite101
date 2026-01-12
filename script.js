@@ -65,10 +65,6 @@ function autoScrollIconsHorizontally() {
             const iconsRectangle = skillScrollSection.getBoundingClientRect();
             const direction = horizontalScrollDirection(e, iconsRectangle, mainRectangle);
 
-            // console.log("Main rect : " + mainRectangle.right)
-            // console.log("Icons rect : " + iconsRectangle.right)
-
-
             if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
                 const iconsCenterY = iconsRectangle.top + iconsRectangle.height / 2;
                 const distanceToTop = iconsCenterY - mainRectangle.top;
@@ -80,7 +76,7 @@ function autoScrollIconsHorizontally() {
                     const targetScrollLeft = progress * maxScrollLeft;
                     skillScrollSection.scrollTo({
                         left: targetScrollLeft,
-                        behavior: 'smooth'
+                        // behavior: 'smooth'
                     });
                     // console.log("maxScrollLeft : " + maxScrollLeft)
                 } else if (direction === -1) {
@@ -88,22 +84,11 @@ function autoScrollIconsHorizontally() {
                     const targetScrollLeft = (1 - progress) * maxScrollRight;
                     skillScrollSection.scrollTo({
                         left: ((maxScrollRight - targetScrollLeft)),
-                        behavior: 'smooth'
+                        // behavior: 'smooth'
                     });
                 }
             }
         }, { passive: false });
-
-
-        // skillScrollSection.addEventListener("pointerenter", () => {
-        //     console.log("Pointer entered horizontal scroll area");
-        //     isFocusedMouse = true;
-        // });
-        // skillScrollSection.addEventListener("pointerleave", () => {
-        //     console.log("Pointer left horizontal scroll area");
-        //     isFocusedMouse = false;
-        // });
-
 
     }
 }
