@@ -1,6 +1,6 @@
 :root {
   --blue-color: #0d6efd;
-  
+
 }
 
 html,
@@ -250,13 +250,14 @@ body {
   padding-bottom: 2%;
 }
 
-.exp-dot{
+.exp-dot {
   display: flex;
   flex-direction: column;
   color: var(--blue-color);
   align-self: center;
 }
-.exp-dates{
+
+.exp-dates {
   flex-shrink: 0;
   align-content: center;
   color: var(--blue-color);
@@ -264,21 +265,41 @@ body {
   margin-inline: 10px;
 }
 
-.exp-dates > .p-2{
+.exp-dates>.p-2 {
   margin: 0;
 }
 
-.exp-card{
+.exp-card {
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  padding: 10px;
-  border: solid #0d6dfd5d ;
-
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 10px;
+  border: solid #0d6dfd5d;
 }
 
-.exp-card-title{
+.exp-card>p {
+  color: rgb(199, 199, 199);
+  /* margin: 5px; */
+  text-align: justify;
+}
+
+.exp-card-title {
   padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.exp-card-title>p {
+  margin: 0 10px 0 auto;
+  font-style: italic;
+}
+
+.exp-card-title>img {
+  max-height: 40px;
+  width: fit-content;
+  margin-right: 20px;
+  /* margin: 0 20px 10px 0; */
 }
 
 .timeline {
@@ -290,9 +311,45 @@ body {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 6px; 
+  left: 6px;
   top: 0;
   bottom: 0;
   width: 5px;
-  background: var(--blue-color); /* solid line color */
+  background: var(--blue-color);
+  /* solid line color */
+}
+
+.contact-me-section {
+  align-items: center;
+
+}
+
+#emailBox {
+  display: flex;
+  /* display: inline-flex; */
+  /* align-items: center; */
+  justify-content: center;
+  background-color: rgba(141, 141, 141, 0.212);
+  color: var(--blue-color);
+  padding: 12px 20px;
+  border-radius: 12px;
+  width: 50%;
+  cursor: grab;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+#tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+  position: absolute;
+  top: -35px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
 }

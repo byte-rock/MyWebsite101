@@ -27,12 +27,11 @@
 
         <i class="bi bi-person fs-1 active-icon" data-original-size="fs-2" data-section="about"></i>
         <i class="bi bi-briefcase fs-3" data-original-size="fs-3" data-section="experience"></i>
-        <i class="bi bi-mortarboard fs-2" data-original-size="fs-2" data-section="education"></i>
+        <!-- <i class="bi bi-mortarboard fs-2" data-original-size="fs-2" data-section="education"></i> -->
         <i class="bi bi-telephone fs-3" data-original-size="fs-3" data-section="contact"></i>
-        <i class="bi bi-linkedin fs-3" data-original-size="fs-3" data-section="linkedIn"></i>
-
         <div class="mt-auto mb-5 download-icon">
-          <i class="bi bi-cloud-download fs-3"></i>
+          <a href="https://www.linkedin.com/in/mazhar-mohammed-6abba9a8/" target="_blank"><i class="bi bi-linkedin fs-3"
+              data-original-size="fs-3"></i></a>
         </div>
       </div>
       <div class="col2 my-portrait">
@@ -206,12 +205,19 @@
         <div class="d-flex">
           <i class="exp-dot bi bi-circle-fill "></i>
           <div class="exp-dates">
-            <h6 class="p-2">2019 - Now</h6>
+            <h6 class="p-2">2024 - Now</h6>
           </div>
           <div class="exp-card">
-            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
-              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            <div class="exp-card-title">
+              <h2 class="text-color text-header-color">Qualitest Group</h2>
+              <p class="theme-color">client:</p>
+              <img class="project-icon-image" src="./assets/icons/vitality-1.svg">
+            </div>
+            <p>Automated Salesforce application workflows while creating internal tools to streamline test data
+              preparation and significantly reduce setup effort. Supported the evaluation of Agentforce agents by
+              validating behavior, safeguards, and handling of sensitive information. Assessed conversational bots to
+              ensure accurate intent recognition and reliable responses across customer interaction channels, while
+              contributing to overall functional and regression quality assurance.
             </p>
           </div>
         </div>
@@ -219,36 +225,55 @@
         <div class="d-flex">
           <i class="exp-dot bi bi-circle-fill "></i>
           <div class="exp-dates">
-            <h6 class="p-2">2019 - Now</h6>
+            <h6 class="p-2">2022 - 2024</h6>
           </div>
           <div class="exp-card">
-            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
-              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            <div class="exp-card-title">
+              <h2 class="text-color text-header-color">Qualitest Group</h2>
+              <p class="theme-color">client:</p>
+              <img class="project-icon-image" style="max-height: 25px;" src="./assets/icons/NHS_2.svg">
+            </div>
+            <p>Automated and streamlined testing processes as an E2E Solutions Assurance Lead with NHS England, ensuring
+              seamless integration of the NHS App with portal providers to consolidate
+              secondary care appointments. Developed and supported internal automation frameworks executing a large
+              suite of tests across web and mobile platforms.
             </p>
           </div>
         </div>
+
         <div class="d-flex">
           <i class="exp-dot bi bi-circle-fill "></i>
           <div class="exp-dates">
-            <h6 class="p-2">2019 - Now</h6>
+            <h6 class="p-2">2019 - 2022</h6>
           </div>
           <div class="exp-card">
-            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
-              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            <div class="exp-card-title">
+              <h2 class="text-color text-header-color">Qualitest Group</h2>
+              <p class="theme-color">client:</p>
+              <img class="project-icon-image" src="./assets/icons/Philips.png">
+            </div>
+            <p>Automated and enhanced workflows for an oncology application, creating tools to
+              streamline testing across multiple modules and systems. Automated end-to-end validation of MRI scanner
+              processes, including image verification and data integration to replicate real-world scenarios.
             </p>
           </div>
         </div>
+
         <div class="d-flex">
           <i class="exp-dot bi bi-circle-fill "></i>
           <div class="exp-dates">
-            <h6 class="p-2">2019 - Now</h6>
+            <h6 class="p-2">2017 - 2019</h6>
           </div>
           <div class="exp-card">
-            <h2 class="text-color text-header-color exp-card-title">Qualitest Group</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cum corporis autem, id, vero iure quas
-              magnam voluptatem molestias, sit itaque! Facilis ab unde mollitia eveniet odit saepe nihil quibusdam!
+            <div class="exp-card-title">
+              <h2 class="text-color text-header-color">Cognizant Tech</h2>
+              <p class="theme-color" style="margin-top: auto;">client:</p>
+              <img class="project-icon-image" style="max-height: 25px; ;" src="./assets/icons/travelers.svg">
+            </div>
+            <p>Contributed to web application development as part of a SAFE Agile Scrum team, including full-stack work
+              on Angular applications and implementing new features to enhance functionality. Automated testing
+              processes to streamline workflows, while also delivering innovative solutions such as a language
+              localization feature that was adopted for future releases.
             </p>
           </div>
         </div>
@@ -264,8 +289,24 @@
 </template>
 
 <template id="contact">
-  <h2>Contact Me</h2>
-  <p>London, United Kingdom</p>
+  <div id="mazharScroll" class="scroll-hidden">
+    <section class="text-color contact-me-section">
+      <h1 class="text-header-color" style="padding-bottom:20px ;">reach me out</h1>
+      <p>
+        I’d love to connect! Feel free to reach out on LinkedIn or drop me an email.
+      </p>
+      <div id="emailBox" onclick="copyEmail()" title="Click to copy email">
+        <span style="font-size: 1.2rem; color: var(--blue-color);">✉️</span>
+        <span id="emailText">m2.byte.09@gmail.com</span>
+      </div>
+      <span id="tooltip">Click to copy</span>
+      <p style="padding-top: 15px;">
+        Beyond automation, I am deeply invested in <strong>full-stack development</strong>, having crafted
+        feature rich applications utilizing modern tech. Committed to continuous growth, I actively
+        contribute to internal innovations and mentoring.
+      </p>
+    </section>
+  </div>
 </template>
 
 <template id="linkedIn">
@@ -277,7 +318,7 @@
 <script src="script.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    handleTabClick('experience');
+    handleTabClick('about');
   });
 </script>
 
