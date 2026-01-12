@@ -122,31 +122,31 @@ function handleTabClick(templateId) {
     }, 600);
 }
 
-const emailBox = document.getElementById("emailBox");
-const tooltip = document.getElementById("tooltip");
+// const emailBox = document.getElementById("emailBox");
+// const tooltip = document.getElementById("tooltip");
 
-emailBox.addEventListener("mouseenter", () => {
-    tooltip.style.visibility = "visible";
-    tooltip.style.opacity = "1";
-    tooltip.textContent = "Click to copy";
-    console.log("Mouse hover on email");
-});
+// emailBox.addEventListener("mouseenter", () => {
+//     tooltip.style.visibility = "visible";
+//     tooltip.style.opacity = "1";
+//     tooltip.textContent = "Click to copy";
+//     console.log("Mouse hover on email");
+// });
 
-emailBox.addEventListener("mouseleave", () => {
-    tooltip.style.opacity = "0";
-    setTimeout(() => { tooltip.style.visibility = "hidden"; }, 300);
-});
+// emailBox.addEventListener("mouseleave", () => {
+//     tooltip.style.opacity = "0";
+//     setTimeout(() => { tooltip.style.visibility = "hidden"; }, 300);
+// });
 
-function copyEmail() {
-    const emailText = document.getElementById("emailText").textContent;
-    const tooltip = document.getElementById("tooltip");
-    navigator.clipboard.writeText(emailText).then(() => {
-        tooltip.textContent = "Copied!";
-        tooltip.style.visibility = "visible";
-        tooltip.style.opacity = "1";
+// function copyEmail() {
+//     const emailText = document.getElementById("emailText").textContent;
+//     const tooltip = document.getElementById("tooltip");
+//     navigator.clipboard.writeText(emailText).then(() => {
+//         tooltip.textContent = "Copied!";
+//         tooltip.style.visibility = "visible";
+//         tooltip.style.opacity = "1";
 
-        setTimeout(() => {
-            tooltip.textContent = "Click to copy";
-        }, 2000);
-    }).catch(err => console.error("Failed to copy email: ", err));
-}
+//         setTimeout(() => {
+//             tooltip.textContent = "Click to copy";
+//         }, 2000);
+//     }).catch(err => console.error("Failed to copy email: ", err));
+// }
