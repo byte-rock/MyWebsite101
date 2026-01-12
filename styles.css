@@ -96,8 +96,11 @@ body {
 }
 
 .name-font {
-  font-family: "Sixtyfour Convergence", sans-serif;
-  color: rgb(189, 224, 255);
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(188, 224, 255);
+  -webkit-text-fill-color: rgb(188, 224, 255);
   text-align: center;
 }
 
@@ -219,8 +222,6 @@ body {
   display: flex;
   flex: 1;
   margin: 1px;
-  /* width: calc(6vw + 4vh);
-  height: calc(6vw + 4vh); */
   padding-inline: 3%;
   flex-direction: column;
   justify-content: center;
@@ -276,6 +277,7 @@ body {
   padding: 10px 15px 10px 15px;
   margin-bottom: 10px;
   border: solid #0d6dfd5d;
+  max-width: 85%;
 }
 
 .exp-card>p {
@@ -290,22 +292,25 @@ body {
   align-items: center;
 }
 
-.exp-card-title>p {
-  margin: 0 10px 0 auto;
+.exp-card-title > .company-name{
+  font-size: 2.2vw;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.exp-card-title > .client-text{
+  margin-left: auto;
+  margin-right: 8px;
   font-style: italic;
 }
 
-.exp-card-title>img {
+.exp-card-title > img {
   max-height: 40px;
-  width: fit-content;
-  margin-right: 20px;
-  /* margin: 0 20px 10px 0; */
+  max-width: 70px;
 }
 
 .timeline {
   position: relative;
-  /* margin: 40px 0; */
-  /* padding-left: 30px; */
 }
 
 .timeline::before {
@@ -316,7 +321,6 @@ body {
   bottom: 0;
   width: 5px;
   background: var(--blue-color);
-  /* solid line color */
 }
 
 .contact-me-section {
@@ -326,8 +330,6 @@ body {
 
 #emailBox {
   display: flex;
-  /* display: inline-flex; */
-  /* align-items: center; */
   justify-content: center;
   background-color: rgba(141, 141, 141, 0.212);
   color: var(--blue-color);
